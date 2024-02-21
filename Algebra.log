@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.3)  21 FEB 2024 16:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.3)  21 FEB 2024 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -282,7 +282,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  55i,10n,62p,250b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/smayday/texmf/fonts/enc/dvips/newtx/ntx-ec-tosf.enc}{/home/smayday/texmf/fonts/enc/dvips/newpx/zpl_TOsF.enc}</home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/smayday/texmf/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/smayday/texmf/fonts/type1/public/newpx/zplb.pfb></home/smayday/texmf/fonts/type1/public/newpx/zplr.pfb></home/smayday/texmf/fonts/type1/public/newpx/zplri.pfb>
-Output written on Algebra.pdf (7 pages, 219626 bytes).
+Output written on Algebra.pdf (7 pages, 219604 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream

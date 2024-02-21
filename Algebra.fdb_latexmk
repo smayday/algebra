@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1708550014 "Algebra.tex" "Algebra.pdf" "Algebra" 1708550015
+["pdflatex"] 1708550297 "Algebra.tex" "Algebra.pdf" "Algebra" 1708550298
   "/etc/texmf/web2c/texmf.cnf" 1693761189 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/smayday/.texlive2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1707093976 186315 26fa79d44008b2242451f6bc5afd9d31 ""
   "/home/smayday/texmf/fonts/enc/dvips/newpx/zpl_TOsF.enc" 1638997615 2697 c0e4acf9af2683eef1d80f88a94044c0 ""
@@ -76,9 +76,9 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1693761203 1405646 f615977d39c81c02745b8fdb8b7a4b72 ""
-  "Algebra.aux" 1708550014 3186 a82784be560409b39ed9cce6c086395f "pdflatex"
-  "Algebra.tex" 1708550013 14433 1eab73ae6503dde9af2d42e9eae34f5b ""
-  "Algebra.toc" 1708550014 1965 a169599789b90f070a24abe641e90372 "pdflatex"
+  "Algebra.aux" 1708550298 3191 baf17a255e1755e481519c790a1dd156 "pdflatex"
+  "Algebra.tex" 1708550296 14436 31eb88ae738a7ef5b6dadd706bc0fd21 ""
+  "Algebra.toc" 1708550298 1970 dc850cbec6af6c14e6d3da4e6d5be0d0 "pdflatex"
   (generated)
   "Algebra.aux"
   "Algebra.log"
