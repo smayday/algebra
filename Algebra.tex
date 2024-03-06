@@ -19,7 +19,10 @@
 \usepackage{xstring}
 \usepackage{etoolbox}
 \usepackage[osf]{newpxtext}
-
+% for linked toc
+\usepackage{pdftexcmds}
+\usepackage{infwarerr}
+\usepackage{hyperref}
 \setcounter{section}{-1}
 \setcounter{tocdepth}{2}
 
@@ -110,7 +113,7 @@ at $b$} if $\text{Ker}(f_b) = \text{Im}(f_{b+1})$.
 \subsubsection{Example.} A \textit{short exact sequence} is a sequence with
 exactly 3 nonzero terms.
 \section{Lecture 1}
-\subsection{Some $R$-module stuff}
+\subsection{Some module stuff}
 \subsubsection{Definition.} Suppose $M$ is an $R$-module and $S \subseteq M$. We
 write $f: R^{(S)} \to M$for $R$-module hom coming from $*$. Then we say $S$ is
 \textit{independent if $f$} is $1-1$. We say that $S$ is a basis if $f$ is an
@@ -190,7 +193,7 @@ that has certain properties. The proof is essentially equivalent is to make
 matrices into JCF. But matrices of polynomials are really hard to do without
 making mistakes. Computers can do this pretty easily, though, you should do this
 in sagemath.
-\section{Lecture 14}
+\section{Lecture 2}
 \subsection{Some Facts of Life}
 We want to prove the two theorems from earlier. To start, let's consider $R$ an integral domain, and
 $S$ a subset of $R$, then we want to define the \text{GCD} and LCM for any subset of
@@ -262,4 +265,50 @@ $R$.
 \item $x$ is primitive if and only if $\{x_i\}$ is primitive.
 \item $1 \in \text{GCD}(C_F(x))$ implies that $x$ is primitive.
 \end{itemize}  
+\section{New Lecture}
+Suppose $R$ is a ring and $S$ is a subset of $R$. Then we are going to define the equivalence relation on $S^{-1}R$ just
+formally, and then mod out by the equivalence relation that you would expect for fractions.
+\subsubsection{Definition.} Suppose $A$ is an integral domain, and $S = A\setminus\{0\}$. Then $S^{-1}A$ is a field, called the
+\textit{field of fractions} of $A$. It is the smallest field that $A$ can go into. 
+\beginproof It works for the same reason that the elementary school teachers say it does. We denote $\text{frac}A$
+denote the field of fractions.
+\subsubsection{Example.} Take $R = \mathbb{Z}$ and let $S =\{n \in \mathbb{Z}: \: p \not | n\}$. Then $S^{-1}\mathbb
+Z= \mathbb Z_{(p)} \subseteq \mathbb Q$.\vs
+I really don't feel like fixing this stuff right now. Just go read about the fractions
+\section{Generalizing the notion of fraction fields and content}
+Let $R = \mathbb{C}[x,y]$. We will see that $R$ is a UFD. Take $E = R^{2}$. Then $c_E((x,y)) = \gcd(x,y) = 1$. Note that
+in a PID, $\gcd(a,b)R = aR + bR$, but in general for a UFD, this is not true, since $\gcd(x,y)R = R \supsetneq xR + yR$
+There are \textit{many} more UFD's than PID's.
+\subsubsection{Lemma.} Suppose $R$ is a UFD, with $S\subseteq R$. Then \begin{itemize}
+\item $\gcd(aS) = c(a)\gcd(S)$, where $c(a) = c_R(a)$
+\item if $F$ is free, say $F = R^{(a)}$, then $c_F(ax) = c(a) c_F(x)$
+\end{itemize} 
+\text{}
+\beginproof we showed a while ago, that $GCD(aS) = a GCD(S)$, and the first item follows. Then, the second item follows
+from the first item.
+\subsubsection{Lemma.} Suppose $S\subseteq k = \text{Frac}(R)$, and , and $a,b \in R\setminus\{0\}$, are two elements
+such that $aS + bS \subseteq R$. Then $c(b) \gcd(aS) = c(a) \gcd(bS)$. Consequently, 
+\[
+ \frac{\gcd(aS)}{c(a)} = \frac{\gcd(bS)}{c(b)}
+\]
+Because by the first item in the previous lemma, we have $c(b) \gcd(aS) = \gcd(abS)$ etc.
+\subsubsection{Definition.} If $S\subseteq k$ is a subset, such that there exists some $a\in R\setminus\{0\}$, such that
+$aS \subseteq R$, then we say that $S$ has 1\textit{bounded denominator}. We set $\gcd(S) = \frac{\gcd(aS)}{c(a)}$, and
+this definition is independent of $a$ by the previous lemma.
+\subsubsection{Example.} We have that $\gcd(\frac{1}{5},\frac{1}{7}) = \frac{1}{35}$. These guys are hte minimum of the
+$\nu_p$ of the guys in the set. eg. $\gcd(a,b) = \prod_{p\in \Sigma} p^{\min_{s\in S}(\nu_ps)}$.\vs
+SEt $F = R^{(I)}\subseteq L = k^{(I)}$. Then if $x \in L$, then we can always find soime $a \in R\setminus\{0\}$ such
+that $ax\in F$. Then set $c(x) = c_F(ax)/c(a)$ Then you can check that this doesn't depend on $a$ for the same reason as
+the last time we checked that the definition didn't depend on $a$. Take $F = \mathbb{Z}^{2}\subseteq L = k^{2}$, and $x
+= (\frac{1}{5},\frac{1}{7})\in L$, then we have $c_F(x) = \frac{1}{35}c_F(7,5) = \frac{1}{35}\cdot 1 = \frac{1}{35}$.\vs
+Suppose $x\in L\setminus\{0\}$. Then $x = c(x) x_{\text{prim}}$, where $x_{\text{prim}}$ is a primitive element of $F$,
+moreover, this decomposition is unique; if $x = uy$ for some $u \in k_\Sigma$, and we have $y$ primitive iff $u = c(x)$
+and $y = x_{\text{prim}}$.
+\beginproof Find $a\in R\setminus\{0\}$ such that $ax\in F$. Then by multiplying $a $ by a unit, we can assume $a \in
+R_\Sigma$. Therefore, $c(a) = a$. Assuming this, set $x_\text{prim} = c_F(ax)^{-1}ax$. We know that since $x \neq 0$
+then $c_F(ax)$ is invertible. Then $c(ax)$ is the gcd of the coefficients of $ax$, so $c(ax)^{-1}ax \in F$. Moreover,
+$c_F(c_F(ax)^{-1}ax) = c(c_F(ax)^{-1})c_F(ax) = 1$. Therefore, $c_F(ax)^{-1}$ is primitive. So $x_\text{prim}$ is
+primitive. The rest will be done next time.
+
+
 \end{document}
